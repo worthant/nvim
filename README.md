@@ -1,4 +1,4 @@
-# AstroNvim User Configuration Example
+# Worthant's AstroNvim configuration
 
 A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
@@ -11,7 +11,7 @@ mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
 
-#### Clone AstroNvim
+#### Clone this repo
 
 ```shell
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
@@ -26,7 +26,7 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/user
+git clone git@github.com:worthant/neovim.git ~/.config/nvim/lua/user
 ```
 
 #### Start Neovim
@@ -34,3 +34,10 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/us
 ```shell
 nvim
 ```
+
+## TODOs:
+
+- [ ] fix `Themery` plugin for changing themes
+- [ ] add configuration for null_ls and prettier formatters
+- [x] add lsp servers for js, ts, html, css, twcss
+- [x] add config for clangd lsp server (need for `cpp`)
