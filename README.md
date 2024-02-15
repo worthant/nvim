@@ -40,5 +40,7 @@ nvim
 - [ ] fix `Themery` plugin for changing themes
 - [ ] add confiluration for null_ls and prettier formatters
 - [ ] add [multi-cursor plugin](https://github.com/mg979/vim-visual-multi) for my setup
+- [ ] Try `Neorg`
+- [x] add `wakatime` plugin
 - [x] add lsp servers for js, ts, html, css, twcss
 - [x] add config for clangd lsp server (need for `cpp`)

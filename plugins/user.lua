@@ -9,7 +9,13 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  
+  {
+    "wakatime/vim-wakatime",
+    lazy=false,
+    setup = function ()
+      vim.cmd([[packadd wakatime/vim-wakatime]])
+    end
+  },
   {
     "zaldih/themery.nvim",
     lazy = false,
