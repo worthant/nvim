@@ -39,8 +39,14 @@ nvim
 
 - [ ] fix `Themery` plugin for changing themes
 - [ ] add confiluration for null_ls and prettier formatters
-- [ ] add [multi-cursor plugin](https://github.com/mg979/vim-visual-multi) for my setup
+- [x] add [multi-cursor plugin](https://github.com/smoka7/multicursors.nvim) for my setup
 - [ ] Try `Neorg`
+- [x] add preview plugins for markdown
+    - [x] `markdown-togglecheck`
+    - [x] `peek`
+    - [x] `markdown-preview`
+    - [x] `glow`
+- [ ] Use those for a while and customise what i feel is needed
 - [x] add `wakatime` plugin
 - [x] add `lazygit`
 - [x] add `bottom`
