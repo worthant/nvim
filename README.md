@@ -42,5 +42,8 @@ nvim
 - [ ] add [multi-cursor plugin](https://github.com/mg979/vim-visual-multi) for my setup
 - [ ] Try `Neorg`
 - [x] add `wakatime` plugin
+- [x] add `lazygit`
+- [x] add `bottom`
 - [x] add lsp servers for js, ts, html, css, twcss
+- [x] configure highlighting & personal theme
 - [x] add config for clangd lsp server (need for `cpp`)
