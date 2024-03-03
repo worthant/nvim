@@ -37,6 +37,8 @@ nvim
 
 ## TODOs:
 
+- [ ] Add support for clojure (lsp, debug, e.t.c.)
+- [ ] Add debugger for cpp, learn how to use it 
 - [ ] fix `Themery` plugin for changing themes
 - [ ] add confiluration for null_ls and prettier formatters
 - [x] add [multi-cursor plugin](https://github.com/smoka7/multicursors.nvim) for my setup
