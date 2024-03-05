@@ -5,6 +5,9 @@ A user configuration template for
 
 ## 🛠️ Installation
 
+> [!CAUTION]  
+> I am dropping AstroNvim config in favour of my own core in the mean time
+
 #### Make a backup of your current nvim and shared folder
 
 ```shell
