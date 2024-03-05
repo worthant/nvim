@@ -46,7 +46,7 @@ nvim
 - [ ] Add custom mappings for compiling cpp files using my `cmp` script
 - [ ] Add custom mappings for neatly opening a terminal (**<leader>th can't
       close terminal - map to cntrl k and then close**)
-- [ ] Add custom mappings for markdown preview, glow, toggle-check and peek
+- [x] Add custom mappings for markdown preview and glow
 - [ ] Add support for clojure (lsp, debug, e.t.c.)
 - [ ] Add debugger for cpp, learn how to use it
 - [ ] fix `Themery` plugin for changing themes
@@ -55,14 +55,21 @@ nvim
       my setup
 - [ ] Try `Neorg`
 - [x] add preview plugins for markdown
-  - [x] `markdown-togglecheck`
-  - [x] `peek`
   - [x] `markdown-preview`
   - [x] `glow`
-- [ ] Use those for a while and customise what i feel is needed
+- [x] Use those for a while and customise what i feel is needed
 - [x] add `wakatime` plugin
 - [x] add `lazygit`
 - [x] add `bottom`
 - [x] add lsp servers for js, ts, html, css, twcss
 - [x] configure highlighting & personal theme
 - [x] add config for clangd lsp server (need for `cpp`)
+
+## Mappings
+
+### Custom
+
+| Action           | Mappings      |
+| ---------------- | ------------- |
+| Glow Markdown    | `Leader + gw` |
+| Preview Markdown | `Leader + md` |
