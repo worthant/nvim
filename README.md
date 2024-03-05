@@ -73,3 +73,23 @@ nvim
 | ---------------- | ------------- |
 | Glow Markdown    | `Leader + gw` |
 | Preview Markdown | `Leader + md` |
+
+### Terminal
+
+| Action              | Mappings      |
+| ------------------- | ------------- |
+| Horizontal terminal | `Leader + th` |
+| Vertical terminal   | `Leader + tv` |
+| Toggle any terminal | `1`           |
+
+### Sessions
+
+| Action       | Mappings     |
+| ------------ | ------------ |
+| All sessions | `Leader + r` |
+
+### Colorscheme
+
+| Action        | Mappings      |
+| ------------- | ------------- |
+| Select scheme | `Leader + ft` |
