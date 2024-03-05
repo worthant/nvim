@@ -1,6 +1,7 @@
 # Worthant's AstroNvim configuration
 
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+A user configuration template for
+[AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
 
@@ -19,9 +20,11 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 #### Create a new user repository from this template
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
+Press the "Use this template" button above to create a new repository to store
+your user configuration.
 
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
+You can also just clone this repository directly if you do not want to track
+your user configuration in GitHub.
 
 #### Clone the repository
 
@@ -37,17 +40,22 @@ nvim
 
 ## TODOs:
 
+- [ ] Add custom mappings for compiling cpp files using my `cmp` script
+- [ ] Add custom mappings for neatly opening a terminal (**<leader>th can't
+      close terminal - map to cntrl k and then close**)
+- [ ] Add custom mappings for markdown preview, glow, toggle-check and peek
 - [ ] Add support for clojure (lsp, debug, e.t.c.)
-- [ ] Add debugger for cpp, learn how to use it 
+- [ ] Add debugger for cpp, learn how to use it
 - [ ] fix `Themery` plugin for changing themes
 - [ ] add confiluration for null_ls and prettier formatters
-- [x] add [multi-cursor plugin](https://github.com/smoka7/multicursors.nvim) for my setup
+- [x] add [multi-cursor plugin](https://github.com/smoka7/multicursors.nvim) for
+      my setup
 - [ ] Try `Neorg`
 - [x] add preview plugins for markdown
-    - [x] `markdown-togglecheck`
-    - [x] `peek`
-    - [x] `markdown-preview`
-    - [x] `glow`
+  - [x] `markdown-togglecheck`
+  - [x] `peek`
+  - [x] `markdown-preview`
+  - [x] `glow`
 - [ ] Use those for a while and customise what i feel is needed
 - [x] add `wakatime` plugin
 - [x] add `lazygit`
