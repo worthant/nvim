@@ -51,10 +51,14 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "clangd",
+      "tailwindcss",
     },
     config = {
       clangd = {
         cmd = { "clangd", "--offset-encoding=utf-16" },
+      },
+      tailwindcss = {
+        filetypes = { "html", "javascriptreact", "typescriptreact", "css", "scss" },
       },
     },
   },
