@@ -19,6 +19,8 @@ return {
         "clangd",
         "rust_analyzer",
         "taplo",
+        "sourcery",
+        "lemminx",
       })
     end,
   },

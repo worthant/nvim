@@ -52,6 +52,7 @@ return {
     servers = {
       "clangd",
       "tailwindcss",
+      "lemminx",
     },
     config = {
       clangd = {
@@ -60,9 +61,93 @@ return {
       tailwindcss = {
         filetypes = { "html", "javascriptreact", "typescriptreact", "css", "scss" },
       },
+      lemminx = {
+        filetypes = { "xml", "xsd", "xslt", "svg", "ant" },
+        init_options = {
+          javaRuntime = "/usr/bin/java",
+          -- Enable document links
+          documentLinks = {
+            enabled = true,
+          },
+          -- Enable diagnostics
+          diagnostics = {
+            enabled = true,
+          },
+          -- Enable code actions
+          codeActions = {
+            enabled = true,
+          },
+          -- Enable document formatting
+          format = {
+            enabled = true,
+          },
+          -- Enable document symbols
+          symbols = {
+            enabled = true,
+          },
+        },
+        settings = {
+          xml = {
+            -- Enable XML validation
+            validation = {
+              enabled = true,
+            },
+            -- Enable XML formatting
+            format = {
+              enabled = true,
+              splitAttributes = false,
+              joinCDATALines = false,
+              formatComments = true,
+              joinContentLines = false,
+              spaceBeforeEmptyCloseTag = true,
+              preserveEmptyContent = true,
+              maxLineWidth = 120,
+              indentSize = 4,
+              insertSpaces = false,
+              spaceBeforeEquals = true,
+              spaceAfterEquals = true,
+            },
+            -- Enable XML completion
+            completion = {
+              autoCloseTags = true,
+              autoCloseRemovesContent = true,
+              triggerCharacters = { "<", '"', "'" },
+            },
+            -- Enable XML hover information
+            hover = {
+              documentation = true,
+              references = true,
+            },
+            -- Enable XML code lens
+            codeLens = {
+              enabled = true,
+            },
+            -- Enable XML document symbols
+            symbols = {
+              enabled = true,
+              excluded = {},
+            },
+            -- Enable XML document links
+            documentLink = {
+              enabled = true,
+            },
+            -- Enable XML rename
+            rename = {
+              enabled = true,
+            },
+          },
+        },
+      },
     },
   },
-
+  {
+    "edluffy/hologram.nvim",
+    config = function()
+      require("hologram").setup {
+        auto_display = true,
+      }
+    end,
+  },
   -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },

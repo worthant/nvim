@@ -43,6 +43,8 @@ nvim
 
 ## TODOs:
 
+- [x] Add lsp for java
+- [x] Add xml formatter (`lemminx`)
 - [ ] Add custom mappings for compiling cpp files using my `cmp` script
 - [ ] Add custom mappings for neatly opening a terminal (**<leader>th can't
       close terminal - map to cntrl k and then close**)
@@ -50,7 +52,7 @@ nvim
 - [ ] Add support for clojure (lsp, debug, e.t.c.)
 - [ ] Add debugger for cpp, learn how to use it
 - [ ] fix `Themery` plugin for changing themes
-- [ ] add confiluration for null_ls and prettier formatters
+- [x] add confiluration for null_ls and prettier formatters
 - [x] add [multi-cursor plugin](https://github.com/smoka7/multicursors.nvim) for
       my setup
 - [ ] Try `Neorg`
