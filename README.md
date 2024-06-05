@@ -43,6 +43,10 @@ nvim
 
 ## TODOs:
 
+- [ ] Popup astronvim's notifications are annoying as hell - move them to the background or remove completely
+- [ ] Add all configs for lsp's, there shouldn't be any errors
+- [ ] Setup formatter and linter correctly (typescript, javascript, c)
+  - Note: they shouldn't interfere with eachother. Now javascript is getting formatted by clang and other bs xD
 - [x] Add lsp for java
 - [x] Add xml formatter (`lemminx`)
 - [ ] Add custom mappings for compiling cpp files using my `cmp` script
