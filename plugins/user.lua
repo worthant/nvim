@@ -1,14 +1,22 @@
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
+  {
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_compiler_method = "latexmk"
+      vim.g.vimtex_quickfix_mode = 0
+    end,
+  },
+  {
+    "edluffy/hologram.nvim",
+    config = function()
+      require("hologram").setup {
+        auto_display = true,
+      }
+    end,
+  },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -55,63 +63,53 @@ return {
     },
   },
   {
-    "zaldih/themery.nvim",
+    "xiyaowong/transparent.nvim",
     lazy = false,
     config = function()
-      require("themery").setup {
-        themes = {
-          {
-            name = "ayu",
-            light = "ayu_light",
-            dark = "ayu_mirage",
-          },
-          {
-            name = "gruvbox",
-            light = "gruvbox_light",
-            dark = "gruvbox_dark",
-          },
-          {
-            name = "tokyonight",
-            light = "tokyonight_light",
-            dark = "tokyonight_storm",
-          },
-          {
-            name = "nord",
-            light = "nord_light",
-            dark = "nord_night",
-          },
-          {
-            name = "nightfox",
-            light = "nightfox_light",
-            dark = "nightfox_dark",
-          },
-          {
-            name = "rose-pine",
-            light = "rose-pine_dawn",
-            dark = "rose-pine_moon",
-          },
-          {
-            name = "catppuccino",
-            light = "catppuccino_light",
-            dark = "catppuccino_dark",
-          },
-          {
-            name = "kanagawa",
-            light = "kanagawa_light",
-            dark = "kanagawa_dark",
-          },
+      require("transparent").setup {
+        groups = { -- table: default groups
+          "Normal",
+          "NormalNC",
+          "Comment",
+          "Constant",
+          "Special",
+          "Identifier",
+          "Statement",
+          "PreProc",
+          "Type",
+          "Underlined",
+          "Todo",
+          "String",
+          "Function",
+          "Conditional",
+          "Repeat",
+          "Operator",
+          "Structure",
+          "LineNr",
+          "NonText",
+          "SignColumn",
+          "CursorLine",
+          "CursorLineNr",
+          "StatusLine",
+          "StatusLineNC",
+          "EndOfBuffer",
         },
-        themeConfigFile = "~/.config/nvim/lua/user/theme.lua",
-        livePreview = true,
-        --[[
-        themes = {"onedark", "ayu", "gruvbox", "tokyonight", "nord", "nightfox", "rose-pine", "catppuccino", "kanagawa"},
-        styles = {
-          italic = true,
-          bold = true,
+        extra_groups = { -- table: additional groups that should be cleared
+          "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+          "NvimTreeNormal", -- NvimTree
+          "NeoTreeNormal", -- NeoTree
+          "NeoTreeNormalNC", -- NeoTree (if you use NeoTree)
         },
-        ]]
-        --
+        exclude_groups = {}, -- table: groups you don't want to clear
       }
+      vim.cmd [[
+        highlight Normal guibg=NONE ctermbg=NONE
+        highlight NonText guibg=NONE ctermbg=NONE
+        highlight LineNr guibg=NONE ctermbg=NONE
+        highlight Folded guibg=NONE ctermbg=NONE
+        highlight EndOfBuffer guibg=NONE ctermbg=NONE
+      ]]
+        require('transparent').clear_prefix('NeoTree')
     end,
   },
 }
