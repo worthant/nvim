@@ -18,25 +18,12 @@ return {
     -- },
 
     -- My custom mappings
+    ["<leader>pp"] = { ":wa<CR>:TermExec cmd='python3 %' direction=float<CR>", desc = "Compile python on the go" },
     ["<leader>bf"] = { ":exe ':silent !firefox %'<cr>", desc = "Preview in Firefox" },
     ["<leader>md"] = { ":MarkdownPreview<cr>", desc = "Preview Markdown" },
     ["<leader>gw"] = { ":Glow!<cr>", desc = "Glow Markdown" },
-    ["<leader>mp"] = {
-      function()
-        local file = vim.fn.expand "%"
-        local command = "cmp " .. file
-        local term = require("toggleterm.terminal").Terminal:new {
-          cmd = command,
-          direction = "float",
-          close_on_exit = false,
-          on_open = function(term)
-            vim.cmd "startinsert!"
-            vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<C-q>", "<cmd>close<CR>", { noremap = true, silent = true })
-          end,
-          on_close = function(term) vim.cmd "stopinsert!" end,
-        }
-        term:open()
-      end,
+    ["<leader>cp"] = {
+      ":wa<CR>:TermExec cmd='g++ % -o %:r && %:r' direction=float<CR>",
       desc = "Compile and Run cpp files",
     },
     -- mappings seen under group name "Buffer"
