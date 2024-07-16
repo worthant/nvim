@@ -53,8 +53,15 @@ return {
       "clangd",
       "tailwindcss",
       "lemminx",
+      "ruff_lsp",
     },
     config = {
+      ruff_lsp = {
+        filetypes = { "python" },
+        root_dir = function(fname)
+          return require("lspconfig.util").find_git_ancestor(fname) or vim.fn.getcwd()
+        end,
+      },
       clangd = {
         cmd = { "clangd", "--offset-encoding=utf-16" },
       },

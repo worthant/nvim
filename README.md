@@ -45,6 +45,7 @@ nvim
 
 - [ ] Popup astronvim's notifications are annoying as hell - move them to the background or remove completely
 - [ ] Add all configs for lsp's, there shouldn't be any errors
+- [x] Setup formatter(black) and linter(ruff) for `Python`, using null-ls plugin
 - [ ] Setup formatter and linter correctly (typescript, javascript, c)
   - Note: they shouldn't interfere with eachother. Now javascript is getting formatted by clang and other bs xD
 - [x] Add lsp for java
