@@ -1,12 +1,25 @@
-# Worthant's AstroNvim configuration
-
-A user configuration template for
-[AstroNvim](https://github.com/AstroNvim/AstroNvim)
+# Worthant's Neovim configuration
 
 ## 🛠️ Installation
 
-> [!CAUTION]  
-> I am dropping AstroNvim config in favour of my own core in the mean time
+Generally, there are **2 ways** of installing anything into `.config/`
+
+### 1. Clone repo anywhere you want, and create a soft link there
+
+#### Clone the repository
+
+```shell
+git clone https://github.com/worthant/nvim.git <your_path>
+```
+
+#### Go into ~/.config and create a symbolic link
+
+```shell
+cd ~/.config
+ln -s <path_to_cloned_repo> nvim
+```
+
+### 2. Backup your files and just clone the repo into `.config/`
 
 #### Make a backup of your current nvim and shared folder
 
@@ -15,39 +28,60 @@ mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
 
-#### Clone this repo
-
-```shell
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-```
-
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store
-your user configuration.
-
-You can also just clone this repository directly if you do not want to track
-your user configuration in GitHub.
-
 #### Clone the repository
 
 ```shell
-git clone git@github.com:worthant/neovim.git ~/.config/nvim/lua/user
+git clone https://github.com/worthant/nvim.git ~/.config/nvim
 ```
 
-#### Start Neovim
+## Usage
+
+### Start Neovim
 
 ```shell
 nvim
 ```
 
+### Mappings
+
+#### Custom
+
+| Action           | Mappings      |
+| ---------------- | ------------- |
+| Glow Markdown    | `Leader + gw` |
+| Preview Markdown | `Leader + md` |
+
+#### Terminal
+
+| Action              | Mappings      |
+| ------------------- | ------------- |
+| Horizontal terminal | `Leader + th` |
+| Vertical terminal   | `Leader + tv` |
+| Toggle any terminal | `1`           |
+
+#### Sessions
+
+| Action       | Mappings     |
+| ------------ | ------------ |
+| All sessions | `Leader + r` |
+
+#### Colorscheme
+
+| Action        | Mappings      |
+| ------------- | ------------- |
+| Select scheme | `Leader + ft` |
+
 ## TODOs:
 
-- [ ] Popup astronvim's notifications are annoying as hell - move them to the background or remove completely
+- [x] Merge `base` & `user` configs into monolithic config
+- [x] Create a separate repo for mantaining merged config
+- [ ] Popup astronvim's notifications are annoying as hell - move them to the
+      background or remove completely
 - [ ] Add all configs for lsp's, there shouldn't be any errors
 - [x] Setup formatter(black) and linter(ruff) for `Python`, using null-ls plugin
 - [ ] Setup formatter and linter correctly (typescript, javascript, c)
-  - Note: they shouldn't interfere with eachother. Now javascript is getting formatted by clang and other bs xD
+  - Note: they shouldn't interfere with eachother. Now javascript is getting
+    formatted by clang and other bs xD
 - [x] Add lsp for java
 - [x] Add xml formatter (`lemminx`)
 - [ ] Add custom mappings for compiling cpp files using my `cmp` script
@@ -71,32 +105,3 @@ nvim
 - [x] add lsp servers for js, ts, html, css, twcss
 - [x] configure highlighting & personal theme
 - [x] add config for clangd lsp server (need for `cpp`)
-
-## Mappings
-
-### Custom
-
-| Action           | Mappings      |
-| ---------------- | ------------- |
-| Glow Markdown    | `Leader + gw` |
-| Preview Markdown | `Leader + md` |
-
-### Terminal
-
-| Action              | Mappings      |
-| ------------------- | ------------- |
-| Horizontal terminal | `Leader + th` |
-| Vertical terminal   | `Leader + tv` |
-| Toggle any terminal | `1`           |
-
-### Sessions
-
-| Action       | Mappings     |
-| ------------ | ------------ |
-| All sessions | `Leader + r` |
-
-### Colorscheme
-
-| Action        | Mappings      |
-| ------------- | ------------- |
-| Select scheme | `Leader + ft` |
