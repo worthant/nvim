@@ -1,9 +1,19 @@
 # Worthant's Neovim configuration
 
+- [Installation](#install)
+  - [Using symlinks (easier to mantain)](#symlink)
+  - [Directly cloning (easier to install)](#direct)
+- [Usage](#usage)
+  - [Startup](#start)
+  - [Mappings](#mappings)
+- [TODOs](#todo)
+
+<a id="install"></a>
 ## 🛠️ Installation
 
 Generally, there are **2 ways** of installing anything into `.config/`
 
+<a id="symlink"></a>
 ### 1. Clone repo anywhere you want, and create a soft link there
 
 #### Clone the repository
@@ -19,6 +29,7 @@ cd ~/.config
 ln -s <path_to_cloned_repo> nvim
 ```
 
+<a id="direct"></a>
 ### 2. Backup your files and just clone the repo into `.config/`
 
 #### Make a backup of your current nvim and shared folder
@@ -34,14 +45,17 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 git clone https://github.com/worthant/nvim.git ~/.config/nvim
 ```
 
+<a id="usage"></a>
 ## Usage
 
+<a id="start"></a>
 ### Start Neovim
 
 ```shell
 nvim
 ```
 
+<a id="mappings"></a>
 ### Mappings
 
 > [!IMPORTANT] 
@@ -101,6 +115,7 @@ nvim
 | Find registers           | `Leader + fr` |
 | Find keymap              | `Leader + fk` |
 
+<a id="todo"></a>
 ## TODOs:
 
 - [x] Merge `base` & `user` configs into monolithic config
