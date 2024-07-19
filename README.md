@@ -44,13 +44,12 @@ nvim
 
 ### Mappings
 
-> [!IMPORTANT]
-> If you want to discover all the keymaps - just press leader and then
-> consecutively choose any command you want, they're well documented:
+> [!IMPORTANT] If you want to discover all the keymaps - just press leader and
+> then consecutively choose any command you want, they're well documented:
 > |![image](https://github.com/user-attachments/assets/22492c4a-380c-456e-8f51-34f69ebbfb14)|
 > |-|
 
-#### Custom
+#### UX
 
 | Action           | Mappings      |
 | ---------------- | ------------- |
@@ -59,19 +58,27 @@ nvim
 | Toggle btop      | `Leader + tt` |
 | Toggle lazygit   | `Leader + tl` |
 
+#### Compile on the go
+
+| Action           | Mappings      |
+| ---------------- | ------------- |
+| Compile `cpp`    | `Leader + cp` |
+| Compile `python` | `Leader + pp` |
+
 #### Terminal
 
 | Action              | Mappings      |
 | ------------------- | ------------- |
+| Toggle any terminal | `F2`          |
+| Float terminal      | `Leader + tf` |
 | Horizontal terminal | `Leader + th` |
 | Vertical terminal   | `Leader + tv` |
-| Toggle any terminal | `F2`          |
 
 #### Sessions
 
-| Action       | Mappings     |
-| ------------ | ------------ |
-| All sessions | `Leader + r` |
+| Action          | Mappings     |
+| --------------- | ------------ |
+| Search sessions | `Leader + r` |
 
 #### Colorscheme
 
@@ -93,12 +100,11 @@ nvim
 | Find registers           | `Leader + fr` |
 | Find keymap              | `Leader + fk` |
 
-
 ## TODOs:
 
 - [x] Merge `base` & `user` configs into monolithic config
 - [x] Create a separate repo for mantaining merged config
-- [ ] Popup astronvim's notifications are annoying as hell - move them to the
+- [x] Popup astronvim's notifications are annoying as hell - move them to the
       background or remove completely
 - [ ] Add all configs for lsp's, there shouldn't be any errors
 - [x] Setup formatter(black) and linter(ruff) for `Python`, using null-ls plugin
