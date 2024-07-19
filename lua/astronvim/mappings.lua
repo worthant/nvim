@@ -344,7 +344,10 @@ if is_available "toggleterm.nvim" then
     maps.n["<leader>tu"] = { function() utils.toggle_term_cmd(gdu) end, desc = "ToggleTerm gdu" }
   end
   if vim.fn.executable "btm" == 1 then
-    maps.n["<leader>tt"] = { function() utils.toggle_term_cmd "btm" end, desc = "ToggleTerm btm" }
+    maps.n["<leader>tb"] = { function() utils.toggle_term_cmd "btm" end, desc = "ToggleTerm Bottom" }
+  end
+  if vim.fn.executable "btop" == 1 then
+    maps.n["<leader>tt"] = { function() utils.toggle_term_cmd "btop" end, desc = "ToggleTerm Top" }
   end
   local python = vim.fn.executable "python" == 1 and "python" or vim.fn.executable "python3" == 1 and "python3"
   if python then maps.n["<leader>tp"] = { function() utils.toggle_term_cmd(python) end, desc = "ToggleTerm python" } end
