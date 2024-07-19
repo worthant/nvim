@@ -44,6 +44,12 @@ nvim
 
 ### Mappings
 
+> [!IMPORTANT]
+> If you want to discover all the keymaps - just press leader and then
+> consecutively choose any command you want, they're well documented:
+> |![image](https://github.com/user-attachments/assets/22492c4a-380c-456e-8f51-34f69ebbfb14)|
+> |-|
+
 #### Custom
 
 | Action           | Mappings      |
@@ -86,10 +92,6 @@ nvim
 | Find History (old files) | `Leader + fo` |
 | Find registers           | `Leader + fr` |
 | Find keymap              | `Leader + fk` |
-
-> [!IMPORTANT]
-> Also, if you want to discover all the keymaps - just press leader and then
-> consecutively choose any command you want, they're well documented:
 
 
 ## TODOs:
