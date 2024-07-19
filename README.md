@@ -50,6 +50,8 @@ nvim
 | ---------------- | ------------- |
 | Glow Markdown    | `Leader + gw` |
 | Preview Markdown | `Leader + md` |
+| Toggle btop      | `Leader + tt` |
+| Toggle lazygit   | `Leader + tl` |
 
 #### Terminal
 
@@ -57,7 +59,7 @@ nvim
 | ------------------- | ------------- |
 | Horizontal terminal | `Leader + th` |
 | Vertical terminal   | `Leader + tv` |
-| Toggle any terminal | `1`           |
+| Toggle any terminal | `F2`          |
 
 #### Sessions
 
@@ -70,6 +72,25 @@ nvim
 | Action        | Mappings      |
 | ------------- | ------------- |
 | Select scheme | `Leader + ft` |
+
+#### Telescope
+
+| Action                   | Mappings      |
+| ------------------------ | ------------- |
+| Find files               | `Leader + ff` |
+| Find all files           | `Leader + fF` |
+| Find words               | `Leader + fw` |
+| Find words in all files  | `Leader + fW` |
+| Find marks               | `Leader + f'` |
+| Find man                 | `Leader + fm` |
+| Find History (old files) | `Leader + fo` |
+| Find registers           | `Leader + fr` |
+| Find keymap              | `Leader + fk` |
+
+> [!IMPORTANT]
+> Also, if you want to discover all the keymaps - just press leader and then
+> consecutively choose any command you want, they're well documented:
+
 
 ## TODOs:
 
