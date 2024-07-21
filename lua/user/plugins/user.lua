@@ -1,5 +1,125 @@
 return {
   {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "vhyrro/luarocks.nvim",
+    lazy = false,
+    priority = 1001, -- this plugin needs to run before anything else
+    opts = {
+      rocks = { "magick" },
+    },
+  },
+  {
+    "3rd/image.nvim",
+    lazy = false,
+    dependencies = { "luarocks.nvim" },
+    config = function()
+      -- ...
+    end,
+  },
+  {
+    "MeanderingProgrammer/markdown.nvim",
+    lazy = false,
+    name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    config = function()
+      require("render-markdown").setup {
+        vim.cmd [[
+          hi rendermarkdownh1bg guibg=#25293c
+          hi RenderMarkdownCode guibg=#443244 guifg=#dcdcdc
+          hi RenderMarkdownCodeBorder guibg=#1c1c1c guifg=#dcdcdc
+        ]],
+        code = {
+          -- Turn on / off code block & inline code rendering
+          enabled = true,
+          -- Turn on / off any sign column related rendering
+          sign = true,
+          -- Determines how code blocks & inline code are rendered:
+          --  none: disables all rendering
+          --  normal: adds highlight group to code blocks & inline code, adds padding to code blocks
+          --  language: adds language icon to sign column if enabled and icon + name above code blocks
+          --  full: normal + language
+          style = "language",
+          -- Amount of padding to add to the left of code blocks
+          left_pad = 10,
+          -- Determins how the top / bottom of code block are rendered:
+          --  thick: use the same highlight as the code body
+          --  thin: when lines are empty overlay the above & below icons
+          border = "thick",
+          -- highlight = "RenderMarkdownCode",
+        },
+        pipe_table = {
+          -- Turn on / off pipe table rendering
+          enabled = true,
+          -- Determines how the table as a whole is rendered:
+          --  none: disables all rendering
+          --  normal: applies the 'cell' style rendering to each row of the table
+          --  full: normal + a top & bottom line that fill out the table when lengths match
+          style = "full",
+          -- Determines how individual cells of a table are rendered:
+          --  overlay: writes completely over the table, removing conceal behavior and highlights
+          --  raw: replaces only the '|' characters in each row, leaving the cells unmodified
+          --  padded: raw + cells are padded with inline extmarks to make up for any concealed text
+          cell = "overlay",
+          -- Characters used to replace table border
+          -- Correspond to top(3), delimiter(3), bottom(3), vertical, & horizontal
+          -- stylua: ignore
+          border = {
+            '┌', '┬', '┐',
+            '├', '┼', '┤',
+            '└', '┴', '┘',
+            '│', '─',
+          },
+          -- Highlight for table heading, delimiter, and the line above
+          head = "RenderMarkdownTableHead",
+          -- Highlight for everything else, main table rows and the line below
+          row = "RenderMarkdownTableRow",
+          -- Highlight for inline padding used to add back concealed space
+          filler = "RenderMarkdownTableFill",
+        },
+        heading = {
+          -- Turn on / off heading icon & background rendering
+          enabled = true,
+          -- Turn on / off any sign column related rendering
+          sign = true,
+          -- Replaces '#+' of 'atx_h._marker'
+          -- The number of '#' in the heading determines the 'level'
+          -- The 'level' is used to index into the array using a cycle
+          -- The result is left padded with spaces to hide any additional '#'
+          icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+          -- Added to the sign column if enabled
+          -- The 'level' is used to index into the array using a cycle
+          signs = { "󰫎 " },
+          -- The 'level' is used to index into the array using a clamp
+          -- Highlight for the heading icon and extends through the entire line
+          backgrounds = {
+            "rendermarkdownh1bg",
+            "rendermarkdownh2bg",
+            "rendermarkdownh3bg",
+            "rendermarkdownh4bg",
+            "rendermarkdownh5bg",
+            "rendermarkdownh6bg",
+          },
+          -- The 'level' is used to index into the array using a clamp
+          -- Highlight for the heading and sign icons
+          foregrounds = {
+            "RenderMarkdownH1",
+            "RenderMarkdownH2",
+            "RenderMarkdownH3",
+            "RenderMarkdownH4",
+            "RenderMarkdownH5",
+            "RenderMarkdownH6",
+          },
+        },
+      }
+    end,
+  },
+  {
     "lervag/vimtex",
     lazy = false, -- we don't want to lazy load VimTeX
     -- tag = "v2.15", -- uncomment to pin to a specific release
@@ -109,7 +229,7 @@ return {
         highlight Folded guibg=NONE ctermbg=NONE
         highlight EndOfBuffer guibg=NONE ctermbg=NONE
       ]]
-        require('transparent').clear_prefix('NeoTree')
+      require("transparent").clear_prefix "NeoTree"
     end,
   },
 }
