@@ -125,30 +125,39 @@ nvim
 
 ## TODOs:
 
-- [x] Add a preview for images in Markdown (use
+- [ ] Add a preview for images in Markdown (use
       [this](https://github.com/3rd/image.nvim) plugin)
+- [ ] Add all configs for lsp's, there shouldn't be any errors
+- [ ] Add support for clojure (lsp, debug, e.t.c.)
+- [ ] Add debugger for cpp, learn how to use it
+- [ ] fix `Themery` plugin for changing themes
+- [ ] Setup formatter and linter correctly
+  - [x] Python
+  - [ ] Js/Ts
+  - [ ] Rust
+  - [x] C
+  - [x] C++
+  - [ ] Go
+  - [ ] Java
+  - [ ] Html, CSS, tailwind css, SCSS
+  - [ ] Json, Yaml
+  - [ ] ? CSV
+  - Note: they shouldn't interfere with eachother. Now javascript is getting
+    formatted by clang and other bs xD
+- [x] Add custom mappings for compiling cpp files using my `cmp` script
+- [x] Add custom mappings for neatly opening a terminal (**<leader>th can't
+      close terminal - map to cntrl k and then close**)
+- [x] Setup formatter(black) and linter(ruff) for `Python`, using null-ls plugin
+- [x] Add lsp for java
+- [x] Add xml formatter (`lemminx`)
+- [x] Add custom mappings for markdown preview and glow
 - [x] Merge `base` & `user` configs into monolithic config
 - [x] Create a separate repo for mantaining merged config
 - [x] Popup astronvim's notifications are annoying as hell - move them to the
       background or remove completely
-- [ ] Add all configs for lsp's, there shouldn't be any errors
-- [x] Setup formatter(black) and linter(ruff) for `Python`, using null-ls plugin
-- [ ] Setup formatter and linter correctly (typescript, javascript, c)
-  - Note: they shouldn't interfere with eachother. Now javascript is getting
-    formatted by clang and other bs xD
-- [x] Add lsp for java
-- [x] Add xml formatter (`lemminx`)
-- [ ] Add custom mappings for compiling cpp files using my `cmp` script
-- [ ] Add custom mappings for neatly opening a terminal (**<leader>th can't
-      close terminal - map to cntrl k and then close**)
-- [x] Add custom mappings for markdown preview and glow
-- [ ] Add support for clojure (lsp, debug, e.t.c.)
-- [ ] Add debugger for cpp, learn how to use it
-- [ ] fix `Themery` plugin for changing themes
 - [x] add confiluration for null_ls and prettier formatters
 - [x] add [multi-cursor plugin](https://github.com/smoka7/multicursors.nvim) for
       my setup
-- [ ] Try `Neorg`
 - [x] add preview plugins for markdown
   - [x] `markdown-preview`
   - [x] `glow`
