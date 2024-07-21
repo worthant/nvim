@@ -9,11 +9,13 @@
 - [TODOs](#todo)
 
 <a id="install"></a>
+
 ## 🛠️ Installation
 
 Generally, there are **2 ways** of installing anything into `.config/`
 
 <a id="symlink"></a>
+
 ### 1. Clone repo anywhere you want, and create a soft link there
 
 #### Clone the repository
@@ -30,6 +32,7 @@ ln -s <path_to_cloned_repo> nvim
 ```
 
 <a id="direct"></a>
+
 ### 2. Backup your files and just clone the repo into `.config/`
 
 #### Make a backup of your current nvim and shared folder
@@ -46,9 +49,11 @@ git clone https://github.com/worthant/nvim.git ~/.config/nvim
 ```
 
 <a id="usage"></a>
+
 ## Usage
 
 <a id="start"></a>
+
 ### Start Neovim
 
 ```shell
@@ -56,6 +61,7 @@ nvim
 ```
 
 <a id="mappings"></a>
+
 ### Mappings
 
 > [!IMPORTANT] 
@@ -116,8 +122,11 @@ nvim
 | Find keymap              | `Leader + fk` |
 
 <a id="todo"></a>
+
 ## TODOs:
 
+- [x] Add a preview for images in Markdown (use
+      [this](https://github.com/3rd/image.nvim) plugin)
 - [x] Merge `base` & `user` configs into monolithic config
 - [x] Create a separate repo for mantaining merged config
 - [x] Popup astronvim's notifications are annoying as hell - move them to the
