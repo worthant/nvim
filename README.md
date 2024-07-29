@@ -125,13 +125,14 @@ nvim
 
 ## TODOs:
 
+- [ ] Add [jupyter inside nvim](https://github.com/dccsillag/magma-nvim)
 - [ ] Add a preview for images in Markdown (use
       [this](https://github.com/3rd/image.nvim) plugin)
 - [ ] Add all configs for lsp's, there shouldn't be any errors
 - [ ] Add support for clojure (lsp, debug, e.t.c.)
 - [ ] Add debugger for cpp, learn how to use it
 - [ ] fix `Themery` plugin for changing themes
-- [ ] Setup formatter and linter correctly
+- [ ] Setup formatter and linter correctly (spend a whole session directly on this task)
   - [x] Python
   - [ ] Js/Ts
   - [ ] Rust
