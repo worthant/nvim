@@ -125,6 +125,7 @@ nvim
 
 ## TODOs:
 
+- [ ] Change `rendermarkdownh6bg` colors (h1-h6) to match my colorscheme 
 - [ ] Add [jupyter inside nvim](https://github.com/dccsillag/magma-nvim)
 - [ ] Add a preview for images in Markdown (use
       [this](https://github.com/3rd/image.nvim) plugin)
