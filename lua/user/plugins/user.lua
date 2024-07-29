@@ -31,6 +31,11 @@ return {
       require("render-markdown").setup {
         vim.cmd [[
           hi rendermarkdownh1bg guibg=#25293c
+          hi rendermarkdownh2bg guibg=#25293c
+          hi rendermarkdownh3bg guibg=#25293c
+          hi rendermarkdownh4bg guibg=#25293c
+          hi rendermarkdownh5bg guibg=#25293c
+          hi rendermarkdownh6bg guibg=#25293c
           hi RenderMarkdownCode guibg=#443244 guifg=#dcdcdc
           hi RenderMarkdownCodeBorder guibg=#1c1c1c guifg=#dcdcdc
         ]],
