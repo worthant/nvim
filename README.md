@@ -125,6 +125,7 @@ nvim
 
 ## TODOs:
 
+- [ ] Add [discord rich presence](https://github.com/andweeb/presence.nvim?tab=readme-ov-file#notes) for fun
 - [ ] Change `rendermarkdownh6bg` colors (h1-h6) to match my colorscheme 
 - [ ] Add [jupyter inside nvim](https://github.com/dccsillag/magma-nvim)
 - [ ] Add a preview for images in Markdown (use
