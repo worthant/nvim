@@ -15,11 +15,14 @@ return {
         extra_args = { "--prose-wrap=always", "--use-tabs", "--single-quote" },
       },
       null_ls.builtins.formatting.black.with {
-        filetypes = { "python" }
+        filetypes = { "python" },
       },
       null_ls.builtins.diagnostics.ruff.with {
         filetypes = { "python" },
         command = "/home/boris/.local/share/nvim/mason/bin/ruff",
+      },
+      null_ls.builtins.formatting.latexindent.with {
+        filetypes = { "tex" },
       },
     }
     return config -- return final config table

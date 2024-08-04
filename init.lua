@@ -20,4 +20,17 @@ if astronvim.default_colorscheme then
   end
 end
 
+-- VimTeX configuration
+-- vim.g.vimtex_compiler_latexmk = {
+--   executable = 'latexmk',
+--   options = {
+--     '-pdf',
+--     '-pdflatex=pdflatex -interaction=nonstopmode -synctex=1',
+--   },
+-- }
+-- vim.g.vimtex_view_method = 'general'
+vim.g.vimtex_view_general_viewer = 'zathura'
+-- vim.g.vimtex_view_general_options = '--unique file:@pdf\\#src:@line@tex'
+vim.g.vimtex_compiler_method = 'latexmk'
+
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)

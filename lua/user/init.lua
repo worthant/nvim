@@ -54,19 +54,56 @@ return {
       "tailwindcss",
       "lemminx",
       "ruff_lsp",
+      "texlab",
     },
     config = {
       ruff_lsp = {
         filetypes = { "python" },
-        root_dir = function(fname)
-          return require("lspconfig.util").find_git_ancestor(fname) or vim.fn.getcwd()
-        end,
+        root_dir = function(fname) return require("lspconfig.util").find_git_ancestor(fname) or vim.fn.getcwd() end,
       },
       clangd = {
         cmd = { "clangd", "--offset-encoding=utf-16" },
       },
       tailwindcss = {
         filetypes = { "html", "javascriptreact", "typescriptreact", "css", "scss" },
+      },
+      texlab = {
+        settings = {
+          texlab = {
+            build = {
+              executable = "latexmk",
+              args = {
+                "-pdf",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-r",
+                "/home/boris/.config/nvim/.latexmkrc",
+                "%f",
+              },
+              onSave = true,
+            },
+            forwardSearch = {
+              executable = "evince",
+              args = { "--unique", "file:%p#src:%l%f" },
+            },
+            chktex = {
+              onEdit = true,
+              onOpenAndSave = true,
+            },
+          },
+        },
+        on_attach = function(bufnr)
+          -- Add autoformat on save if enabled
+          if
+            require("config").lsp.formatting.format_on_save.enabled
+            and vim.tbl_contains(require("config").lsp.formatting.format_on_save.allow_filetypes, "tex")
+          then
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              buffer = bufnr,
+              callback = function() vim.lsp.buf.format { bufnr = bufnr } end,
+            })
+          end
+        end,
       },
       lemminx = {
         filetypes = { "xml", "xsd", "xslt", "svg", "ant" },

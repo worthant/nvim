@@ -21,6 +21,7 @@ return {
         "taplo",
         "lemminx",
         "ruff_lsp",
+        "texlab",
       })
     end,
   },
