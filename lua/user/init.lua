@@ -55,8 +55,35 @@ return {
       "lemminx",
       "ruff_lsp",
       "texlab",
+      "pyright",
     },
     config = {
+      pyright = {
+        on_init = function(client)
+          local venv_path = vim.fn.trim(vim.fn.system "poetry env info -p")
+          if vim.fn.isdirectory(venv_path) == 1 then
+            client.config.settings.python.pythonPath = venv_path .. "/bin/python"
+          end
+        end,
+        settings = {
+          python = {
+            analysis = {
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+              typeCheckingMode = "basic",
+              diagnosticMode = "openFilesOnly", -- or "workspace"
+              reportMissingImports = true,
+              reportUnnecessaryTypeIgnoreComment = false,
+              reportGeneralTypeIssues = "none",
+              reportArgumentTypeIssues = "none",
+              reportAttributeAccessIssues = "none",
+              reportFunctionMemberAccess = "none",
+              reportMissingTypeArgument = "none",
+              reportOptionalMemberAccess = "none",
+            },
+          },
+        },
+      },
       ruff_lsp = {
         filetypes = { "python" },
         root_dir = function(fname) return require("lspconfig.util").find_git_ancestor(fname) or vim.fn.getcwd() end,
