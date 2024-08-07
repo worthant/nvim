@@ -20,6 +20,7 @@ return {
     -- My custom mappings
     ["<leader>lc"] = { "<Plug>(vimtex-compile)", desc = "Compile LATEX" },
     ["<leader>lv"] = { "<Plug>(vimtex-view)", desc = "View LATEX" },
+    ["<leader>nn"] = { ":wa<CR>:TermExec cmd='bun %' direction=float<CR>", desc = "Compile js on the go" },
     ["<leader>pp"] = { ":wa<CR>:TermExec cmd='python3 %' direction=float<CR>", desc = "Compile python on the go" },
     ["<leader>bf"] = { ":exe ':silent !firefox %'<cr>", desc = "Preview in Firefox" },
     ["<leader>md"] = { ":MarkdownPreview<cr>", desc = "Preview Markdown" },
