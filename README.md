@@ -139,6 +139,8 @@ nvim
 | ---------------- | ------------- |
 | Compile `cpp`    | `Leader + cp` |
 | Compile `python` | `Leader + pp` |
+| Run `js` in node | `Leader + nn` |
+| Run `js` in bun  | `Leader + nb` |
 
 #### Terminal
 
@@ -202,7 +204,9 @@ nvim
   - [ ] Java
   - [ ] Html, CSS, tailwind css, SCSS
   - [ ] Json, Yaml
-  - [ ] ? CSV
+  - [ ] CSV
+    - [x] Add `rainbow_csv` plugin to align and view csv inside of neovim
+    - [ ] Add mappings for it
   - Note: they shouldn't interfere with eachother. Now javascript is getting
     formatted by clang and other bs xD
 - [x] Add custom mappings for compiling cpp files using my `cmp` script
