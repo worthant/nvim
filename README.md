@@ -192,9 +192,8 @@ nvim
 - [ ] Add support for clojure (lsp, debug, e.t.c.)
 - [ ] Add debugger for cpp, learn how to use it
 - [ ] fix `Themery` plugin for changing themes
-- [ ] Setup lsp, formatter and linter correctly (spend a whole session directly
-      on this task)
-  - [x] Python (pyright - still need to work on surpressing warnings)
+- [ ] Setup lsp, formatter and linter correctly
+  - [x] Python (ruff, black, mypy)
   - [x] Tex (added preview via zathura)
   - [ ] Js/Ts
   - [ ] Rust

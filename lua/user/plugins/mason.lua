@@ -22,7 +22,7 @@ return {
         "lemminx",
         "ruff_lsp",
         "texlab",
-        "pyright",
+        "mypy",
       })
     end,
   },
