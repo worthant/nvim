@@ -119,8 +119,9 @@ nvim
 
 ### Mappings
 
-> [!IMPORTANT] If you want to discover all the keymaps - just press leader and
-> then consecutively choose any command you want, they're well documented:
+> [!IMPORTANT]  
+> If you want to discover all the keymaps - just press leader and then
+> consecutively choose any command you want, they're well documented:
 > |![image](https://github.com/user-attachments/assets/22492c4a-380c-456e-8f51-34f69ebbfb14)|
 > |-|
 
