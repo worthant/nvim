@@ -200,6 +200,7 @@ nvim
   - [ ] Rust
   - [x] C
   - [x] C++
+  - [ ] Fish
   - [ ] Go
   - [ ] Java
   - [ ] Html, CSS, tailwind css, SCSS
