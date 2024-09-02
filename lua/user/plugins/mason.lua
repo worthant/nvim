@@ -23,6 +23,7 @@ return {
         "ruff_lsp",
         "texlab",
         "mypy",
+        "jedi_language_server"
       })
     end,
   },
