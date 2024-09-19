@@ -55,21 +55,12 @@ return {
       "lemminx",
       "ruff_lsp",
       "texlab",
-      "mypy",
+      "prolog_ls",
     },
     config = {
-      mypy = {
-        settings = {
-          python = {
-            analysis = {
-              typeCheckingMode = "strict",
-              useLibraryCodeForTypes = true,
-              ignore_missing_imports = true,
-            },
-          },
-        },
-        cmd = { "mypy" },
-        filetypes = { "python" },
+      prolog_ls = {
+        cmd = { "swipl", "-g", "prolog_language_server" },
+        filetypes = { "prolog" },
         root_dir = function(fname) return require("lspconfig.util").find_git_ancestor(fname) or vim.fn.getcwd() end,
       },
       ruff_lsp = {

@@ -23,6 +23,7 @@ return {
     ["<leader>nb"] = { ":wa<CR>:TermExec cmd='bun %' direction=float<CR>", desc = "Run js in bun on the go" },
     ["<leader>nn"] = { ":wa<CR>:TermExec cmd='node %' direction=float<CR>", desc = "Run js in node on the go" },
     ["<leader>pp"] = { ":wa<CR>:TermExec cmd='python3 %' direction=float<CR>", desc = "Compile python on the go" },
+    ["<leader>pr"] = { ":wa<CR>:TermExec cmd='swipl %' direction=float<CR>", desc = "Run Prolog on the go"},
     ["<leader>bf"] = { ":exe ':silent !firefox %'<cr>", desc = "Preview in Firefox" },
     ["<leader>md"] = { ":MarkdownPreview<cr>", desc = "Preview Markdown" },
     ["<leader>gw"] = { ":Glow!<cr>", desc = "Glow Markdown" },
