@@ -127,21 +127,25 @@ nvim
 
 #### UX
 
-| Action           | Mappings      |
-| ---------------- | ------------- |
-| Glow Markdown    | `Leader + gw` |
-| Preview Markdown | `Leader + md` |
-| Toggle btop      | `Leader + tt` |
-| Toggle lazygit   | `Leader + tl` |
+| Action             | Mappings      |
+| ------------------ | ------------- |
+| Glow Markdown      | `Leader + gw` |
+| Preview Markdown   | `Leader + md` |
+| Toggle btop        | `Leader + tt` |
+| Toggle lazygit     | `Leader + tl` |
+| Preview in Firefox | `Leader + bf` |
 
 #### Compile on the go
 
-| Action           | Mappings      |
-| ---------------- | ------------- |
-| Compile `cpp`    | `Leader + cp` |
-| Compile `python` | `Leader + pp` |
-| Run `js` in node | `Leader + nn` |
-| Run `js` in bun  | `Leader + nb` |
+| Action                | Mappings      |
+| --------------------- | ------------- |
+| Compile `cpp`         | `Leader + cp` |
+| Compile `python`      | `Leader + pp` |
+| Run `js` in node      | `Leader + nn` |
+| Run `js` in bun       | `Leader + nb` |
+| Toggle LaTeX compiler | `Leader + lc` |
+| View LaTeX (zathura)  | `Leader + lv` |
+| Run `Prolog` in swipl | `Leader + pr` |
 
 #### Terminal
 
