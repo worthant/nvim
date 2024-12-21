@@ -63,7 +63,7 @@ return {
         if not pcall(vim.treesitter.start, buf, "markdown") then vim.bo[buf].syntax = "markdown" end
         vim.wo[win].spell = false
       end,
-      level = "ERROR",
+      level = "OFF",
     },
     config = require "plugins.configs.notify",
   },
