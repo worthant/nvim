@@ -26,14 +26,6 @@ return {
     },
   },
   {
-    "3rd/image.nvim",
-    lazy = false,
-    dependencies = { "luarocks.nvim" },
-    config = function()
-      -- ...
-    end,
-  },
-  {
     "MeanderingProgrammer/markdown.nvim",
     lazy = false,
     name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
