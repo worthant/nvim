@@ -1,0 +1,6 @@
+{
+  "nvim-platformio.lua": { "branch": "main", "commit": "ccca890e2e1ee7822a64ae501866a027d975ab71" },
+  "nvim-toggleterm.lua": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
+  "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
+  "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" }
+}

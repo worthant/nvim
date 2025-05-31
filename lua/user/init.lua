@@ -56,8 +56,10 @@ return {
       "ruff_lsp",
       "texlab",
       "prolog_ls",
+      "kotlin_language_server",
     },
     config = {
+      kotlin_language_server = {},
       prolog_ls = {
         cmd = { "swipl", "-g", "prolog_language_server" },
         filetypes = { "prolog" },
@@ -68,7 +70,11 @@ return {
         root_dir = function(fname) return require("lspconfig.util").find_git_ancestor(fname) or vim.fn.getcwd() end,
       },
       clangd = {
-        cmd = { "clangd", "--offset-encoding=utf-16" },
+        cmd = {
+          "clangd",
+          "--fallback-style=none",
+          "--offset-encoding=utf-16",
+        },
       },
       tailwindcss = {
         filetypes = { "html", "javascriptreact", "typescriptreact", "css", "scss" },

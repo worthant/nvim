@@ -1,5 +1,11 @@
 return {
   {
+    "davidmh/mdx.nvim",
+    lazy = false,
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
+  {
     "mechatroner/rainbow_csv",
     lazy = false,
   },
