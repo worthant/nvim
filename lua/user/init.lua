@@ -74,7 +74,10 @@ return {
           "clangd",
           "--fallback-style=none",
           "--offset-encoding=utf-16",
+          "--compile-commands-dir=.pio/build/esp32-s3-devkitc-1",
         },
+        autostart = true,
+        filetypes = { "c", "cpp", "objc", "objcpp" },
       },
       tailwindcss = {
         filetypes = { "html", "javascriptreact", "typescriptreact", "css", "scss" },
@@ -219,17 +222,15 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "c", "cpp" },
+      callback = function()
+        vim.lsp.start {
+          name = "clangd",
+          cmd = { "/home/boris/.local/share/nvim/mason/bin/clangd", "--offset-encoding=utf-16" },
+          root_dir = vim.fs.dirname(vim.fs.find({ "compile_commands.json", "platformio.ini" }, { upward = true })[1]),
+        }
+      end,
+    })
   end,
 }
